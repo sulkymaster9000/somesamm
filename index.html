@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Garpo Portfolio</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
         
@@ -19,109 +18,126 @@
         }
 
         .navbar {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            z-index: 100;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 0; 
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    z-index: 100;
+    color: #E0E0E0;
         }
 
-        .navbar ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-        .navbar ul li {
-            margin-left: 10px;
-        }
+.navbar ul li {
+    margin-left: 10px; 
+}
 
-        .navbar a {
-            color: black;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 10px 15px;
-            border: 2px solid black;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
+.navbar a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+    border: 2px solid black;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
 
-        .navbar a:hover {
-            background: #f0f0f0;
-            color: black;
-            border-color: #333;
+.navbar a:hover {
+    
+    color: white;
+    border-color: #333;
+
+      
         }
 
         .header {
-            position: relative;
-            height: 100vh;
-            background-image: url('folk.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 0 10%;
-            color: #E0E0E0;
-            overflow: hidden;
-        }
+    position: relative;
+    height: 100vh;
+    background-image: url(m.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+    padding: 0 5%;
+    color: #E0E0E0;
+    overflow: hidden;
+}
 
-        .header-content {
-            max-width: 700px;
-            text-align: left;
-            margin-left: 0;
-            padding-left: 20px;
-        }
+.header-content {
+    max-width: 600px; 
+    padding: 20px;
+    background: rgba(40, 38, 38, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    text-align: left; 
+}
 
-        .header-content h1,
-        .header-content h3,
-        .header-content p {
-            color: #000000;
-        }
+.header-content h1,
+.header-content h3,
+.header-content p {
+    color: #E0E0E0; /* Text color for readability */
+}
+.btn-box {
+    margin-top: 20px;
+    color: white;
+}
 
-        .btn-box {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-        }
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    border: 2px solid #151616;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #E0E0E0;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    background: transparent;
+    position: relative;
+    overflow: hidden; /* Ensures the scale effect is contained */
+}
 
-        .btn-box a {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 150px;
-            height: 50px;
-            border: 2px solid #151616;
-            border-radius: 8px;
-            font-size: 19px;
-            color: #000000;
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 1px;
-            transition: background 0.3s, color 0.3s;
-            background: transparent;
-        }
+.btn-box a:hover {
+    background: #4f2f42;
+    color: #E0E0E0;
+    border-color: #333;
+}
 
-        .btn-box a:hover {
-            background: #4f2f42;
-            color: #E0E0E0;
-            border-color: #333;
-        }
+.btn-box a[href="#contact"] {
+    background: transparent;
+    border: 2px solid #0e1010;
+    color: white;
+}
 
-        .btn-box a[href="#contact"] {
-            background: transparent;
-            border: 2px solid #0e1010;
-        }
+.btn-box a[href="#about"] {
+    background: #56acbb;
+    border: 2px solid #56acbb;
+}
 
-        .btn-box a[href="#about"] {
-            background: #56acbb;
-            border: 2px solid #56acbb;
+/* Click effect */
+.btn-box a:active {
+    transform: scale(0.95); /* Scale down the button */
+    background: #4f2f42; /* Optional: Change background on click */
+    color: #E0E0E0; /* Optional: Change text color on click */
+
+      
+        
         }
 
         .about-section {
@@ -266,9 +282,9 @@
         }
 
         .portfolio img {
-            width: 700px;
-            height: 700px;
-            object-fit: cover;
+            width: 100%;
+            max-width: 700px;
+            height: auto;
             border-radius: 10px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             margin: 10px;
@@ -277,10 +293,6 @@
         .portfolio img:hover {
             transform: scale(1.03);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         .contact {
@@ -323,6 +335,91 @@
             background-color: #333;
             color: #fff;
         }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
+
+            .header {
+                padding: 0 5%;
+            }
+
+            .header-content {
+                padding: 10px;
+            }
+
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .header-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .header-content p {
+                font-size: 1rem;
+            }
+
+            .about-content {
+                width: 95%;
+                padding: 20px;
+            }
+
+            .about-content h1 {
+                font-size: 2rem;
+            }
+
+            .about-content p {
+                font-size: 1rem;
+            }
+
+            #services .card {
+                max-width: 90%;
+            }
+
+            .portfolio-container h2 {
+                font-size: 2rem;
+            }
+
+            .portfolio img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+
+            .header-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .header-content p {
+                font-size: 0.9rem;
+            }
+
+            .about-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .about-content p {
+                font-size: 0.9rem;
+            }
+
+            .btn-box a {
+                width: 120px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body id="home">
@@ -332,7 +429,7 @@
             <li><a href="#about-section">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     
@@ -342,20 +439,25 @@
             <h3><span class="multiple-text"></span></h3>
             <p>I am a 3rd year college student taking up Bachelor of Science Major in Computer Science. Apart from being a web developer, I also write editorials and stories. I am a passionate person and have the flame to do the things I love.</p>
             <div class="btn-box">
-                <a href="#Contact">Contact Me</a>
+                <a href="#contact">Contact Me</a>
             </div>
         </div>
     </header>
 
     <section id="about-section" class="about-section">
         <div class="about-content">
+
             <h1>About Me</h1>
             <p>Hi, I'm Samantha. With no prior knowledge of computers, I embarked on a journey into computer science driven by curiosity and a desire to understand technology. What began as a challenge quickly became a passion as I explored coding and problem-solving. Despite the steep learning curve, my dedication and enthusiasm have transformed my initial uncertainty into a rewarding pursuit. Each step in this journey has not only expanded my technical skills but also deepened my appreciation for the possibilities within the digital world.</p>
         </div>
     </section>
     
+
+    
     <section id="services" class="section">
+        
         <div class="card">
+           
             <h3>Prototyping</h3>
             <p>Developing and presenting interactive prototypes to visualize and test design concepts before full-scale development.</p>
         </div>
@@ -376,7 +478,7 @@
         </div>
     </section>
     
-    <footer id="Contact" class="contact">
+    <footer id="contact" class="contact">
         <div class="contact-content">
             <h2>Connect with Me</h2>
             <div class="social-icons">
